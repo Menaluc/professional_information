@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menalu chekol </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <style>
+    body {
+      font-family: 'Heebo', sans-serif;
+      background-color: #e9f7fc;
+      color: #002b36;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url('img/computer.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #00334e;
+    }
+
+    .hero::before {
+     content: "";
+     position: absolute;
+     top: 0; left: 0;
+     width: 100%; height: 100%;
+     background-color: rgba(255, 255, 255, 0.5);
+     }
+
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, #00c3ff, #007bff);
+      color: white;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-gradient:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    /* Cards */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Progress section */
+    .bg-progress {
+      background-color: #dff6fa; /* תכלת פסטלי עדין */
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #d8f0fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .social-icons a {
+      font-size: 1.6rem;
+      margin: 0 10px;
+      color: #00334e;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="fw-bold mb-3">שלום! אני מנאלו צ׳קול- סטודנטית למדעי המחשב</h1>
+      <p class="lead mb-4"></p>
+      <div class="d-flex gap-2 justify-content-center">
+        <a class="btn btn-gradient px-4" href="#projects">לפרויקטים</a>
+        <a class="btn btn-outline-dark px-4" href="#contact">צור קשר</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="container py-5 text-center">
+    <h2 class="fw-bold mb-3">ברוכים הבאים!</h2>
+    <p class="lead">
+       סטודנטית למדעי המחשב ב-HIT,
+עבדתי עם שפות  Python ו-C,
+מתעניינת בפיתוח תוכנה, עיצוב מערכות ויישומים חכמים שמשלבים בין פתרון בעיות, נתונים וטכנולוגיה.
+    </p>
+    <p>
+      <a href="https://github.com/Menaluc" class="text-decoration-none fw-semibold text-primary" target="_blank">
+        <i class="bi bi-github"></i> GitHub שלי
+      </a> |
+      <a href="https://www.linkedin.com/in/ch-menalu/" class="text-decoration-none fw-semibold text-primary" target="_blank">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+    </p>
+  </section>
+
+  <!-- Projects -->
+ <section id="projects" class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">פרויקטים נבחרים</h2>
+  <div class="row g-4">
+
+    <!-- Connect Four -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm p-3">
+        <h5 class="card-title">🎮 Connect-Four</h5>
+        <p class="card-text">
+          משחק רב-משתתפים שפותח ב-Node.js ו-MySQL.<br>
+          כולל לוגיקה מלאה, REST API וצ׳אט בסיסי.<br>
+          <strong>בהמשך:</strong> פיתוח ממשק משתמש (UI) ב-Vite ו-Bootstrap.
+        </p>
+        <a href="https://github.com/Menaluc/Connect-Four" class="btn btn-outline-primary btn-sm" target="_blank">צפייה ב-GitHub</a>
+      </div>
+    </div>
+
+    <!-- Smart Campus -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm p-3">
+        <h5 class="card-title">🏫 Smart Campus</h5>
+        <p class="card-text">
+          מערכת לזיהוי תפוסת כיתות באמצעות חיישנים ונתונים בזמן אמת.<br>
+          כוללת עיבוד נתונים, REST API ודוחות אינטראקטיביים.<br>
+          <strong>מטרה:</strong> חיסכון בחשמל וניהול כיתות חכם.
+        </p>
+        <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">צפייה ב-GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Projects in progress -->
+  <div class="text-center mt-5 p-4 bg-progress fade-in">
+    <h5 class="fw-bold mb-3">🔧 פרויקטים בפיתוח</h5>
+    <p class="mb-0">
+      שני הפרויקטים נמצאים בהרחבה מתמשכת —
+      פיתוח ממשק משתמש למשחק <strong>Connect-Four</strong>
+      והוספת ניתוח נתונים מתקדם לפרויקט <strong>Smart Campus</strong>.
+    </p>
+  </div>
+</section>
+<section id="skills" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4 text-primary">מיומנויות עיקריות</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- פיתוח תוכנה -->
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+          <h5 class="fw-bold mb-2">💻 פיתוח תוכנה</h5>
+          <p class="mb-0">Java, Python, C, SQL, OOP, Data Structures<br>
+          פיתוח אלגוריתמים ויישום עקרונות תכנות מונחה עצמים</p>
+        </div>
+      </div>
+
+
+      <!-- למידת מכונה -->
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+          <h5 class="fw-bold mb-2">🤖 למידת מכונה ונתונים</h5>
+          <p class="mb-0">Pandas, Scikit-Learn, Regression, Classification<br>
+          ניתוח נתונים ובניית מודלים חכמים לחיזוי ותובנות</p>
+        </div>
+      </div>
+
+      <!-- הנדסת תוכנה -->
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+          <h5 class="fw-bold mb-2">🧩 הנדסת תוכנה וארכיטקטורה</h5>
+          <p class="mb-0">UML, ERD, Design Patterns, MVC, Git<br>
+          ניתוח דרישות, תכנון מערכת ועבודה בצוות</p>
+        </div>
+      </div>
+
+<!-- כלים וטכנולוגיות עבודה -->
+<div class="col-md-4">
+  <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+    <h5 class="fw-bold mb-2">🛠️ כלים וטכנולוגיות עבודה</h5>
+    <p class="mb-0">
+      WebStorm, VS Code, Git & GitHub, MySQL Workbench, Postman.<br>
+      <br>
+    </p>
+  </div>
+</div>
+
+
+      <!-- מיומנויות רכות -->
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+          <h5 class="fw-bold mb-2">🧠 מיומנויות רכות</h5>
+          <p class="mb-0">למידה עצמית, ניהול זמן, עבודה בצוות<br>
+          חשיבה אנליטית, יצירתיות ופתרון בעיות</p>
+        </div>
+      </div>
+      <!-- הדרכה והעברת ידע -->
+      <div class="col-md-4">
+      <div class="p-4 shadow-sm bg-white rounded-4 h-100">
+      <h5 class="fw-bold mb-2">🎓 הדרכה והעברת ידע</h5>
+      <p class="mb-0">
+      רקע צבאי כמדריכה וכמפתחת הדרכה בצה״ל.<br>
+      ניסיון בהובלת הכשרות מקצועיות, פיתוח תכנים והנחיית צוותים.<br>
+      שילוב בין יכולת תקשורת בין-אישית גבוהה, אחריות ועמידה בלוחות זמנים.
+    </p>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="text-center py-5 bg-light">
+    <h2 class="fw-bold mb-3">צור קשר</h2>
+    <p>📧 <a href="mailto:menaluchekol@gmail.com" class="text-decoration-none text-dark">menaluchekol@gmail.com</a></p>
+    <p>💼 <a href="https://www.linkedin.com/in/ch-menalu/" class="text-decoration-none text-dark" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-2 small">© <span id="year"></span> מנאלו צ׳ — כל הזכויות שמורות</p>
+      <div class="social-icons">
+        <a href="/https://www.linkedin.com/in/ch-menalu/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:menaluchekol.com"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // עדכון שנה אוטומטי בפוטר
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // אנימציית fade-in לחלק של הפרויקטים בפיתוח
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
